@@ -19,12 +19,12 @@ cat <<"EOF"
   / /_/ / __ `/ __  / __ `/ ___/ ___/
  / _, _/ /_/ / /_/ / /_/ / /  / /    
 /_/ |_|\__,_/\__,_/\__,_/_/  /_/     
-    V8
+    V82
 EOF
 }
 header_info
 echo -e "Loading..."
-APP="Sonarr and Radarr"
+APP="Testo"
 var_disk="8"
 var_cpu="4"
 var_ram="2048"
