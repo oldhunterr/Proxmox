@@ -3,7 +3,7 @@ source <(curl -s https://raw.githubusercontent.com/oldhunterr/Proxmox/main/misc/
 # Copyright (c) 2021-2024 tteck
 # Author: tteck (tteckster)
 # License: MIT
-# https://github.com/tteck/Proxmox/raw/main/LICENSE
+# https://github.com/oldhunterr/Proxmox/raw/main/LICENSE
 
 function header_info {
 clear
