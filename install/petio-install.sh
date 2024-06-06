@@ -41,8 +41,9 @@ msg_ok "MongoDB 4.4 Installed"
 msg_info "Installing Petio"
 useradd -M --shell=/bin/false petio
 mkdir /opt/Petio
-wget https://petio.tv/releases/latest -O petio-latest.zip
-unzip petio-latest.zip -d /opt/Petio
+wget -q https://petio.tv/releases/latest -O petio-latest.zip
+$STD unzip -q petio-latest.zip -d /opt/Petio
+rm -rf petio-latest.zip
 chown -R petio:petio /opt/Petio
 msg_ok "Installed Petio"
 
