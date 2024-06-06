@@ -54,16 +54,13 @@ function default_settings() {
 
 function update_script() {
 header_info
-if [[ ! -d /opt/Sonarr ]]; then msg_error "No ${APP} Installation Found!"; exit; fi
-msg_info "Updating $APP v4"
-systemctl stop sonarr.service
-wget -q -O SonarrV4.tar.gz 'https://services.sonarr.tv/v1/download/main/latest?version=4&os=linux&arch=x64'
-tar -xzf SonarrV4.tar.gz
-rm -rf /opt/Sonarr
-mv Sonarr /opt
-rm -rf SonarrV4.tar.gz
-systemctl start sonarr.service
-msg_ok "Updated $APP v4"
+if [[ ! -d /opt/Petio ]]; then msg_error "No ${APP} Installation Found!"; exit; fi
+msg_info "Updating $APP"
+systemctl stop petio.service
+wget https://petio.tv/releases/latest -O petio-latest.zip
+unzip petio-latest.zip -d /opt/Petio
+systemctl start petio.service
+msg_ok "Updated $APP"
 exit
 }
 
