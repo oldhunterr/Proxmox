@@ -21,8 +21,11 @@ $STD apt-get install -y mc
 msg_ok "Installed Dependencies"
 
 msg_info "Installing MongoDB 4.4"
+msg_info "Before Key"
 wget -qO- https://www.mongodb.org/static/pgp/server-4.4.asc | gpg --dearmor >/usr/share/keyrings/mongodb-server-4.4.gpg
+msg_info "After Key"
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu $(grep '^VERSION_CODENAME=' /etc/os-release | cut -d'=' -f2)/mongodb-org/4.4 multiverse" > /etc/apt/sources.list.d/mongodb-org-4.4.list
+msg_info "After Sources.list.d"
 $STD apt-get update
 $STD apt-get install -y mongodb-org
 sed -i 's/bindIp: 127.0.0.1/bindIp: 0.0.0.0/' /etc/mongod.conf
