@@ -60,10 +60,7 @@ RestartSec=1
 ExecStart=/opt/Petio/bin/petio-linux
 User=petio
 
-[Install]
-WantedBy=multi-user.target
 EOF
-systemctl daemon-reload
 systemctl enable -q --now petio.service
 msg_ok "Created Service"
 
