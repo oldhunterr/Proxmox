@@ -13,7 +13,7 @@ cat <<"EOF"
   / /_/ / _ \/ __/ / __ \
  / ____/  __/ /_/ / /_/ /
 /_/    \___/\__/_/\____/ 
-    Debugging !
+    Debugging ! v2
 EOF
 }
 header_info

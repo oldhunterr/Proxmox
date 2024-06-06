@@ -45,7 +45,7 @@ unzip petio-latest.zip -d /opt/Petio
 chown -R petio:petio /opt/Petio
 msg_ok "Installed Petio"
 
-sg_info "Creating Service"
+msg_info "Creating Service"
 cat <<EOF >/etc/systemd/system/petio.service
 [Unit]
 Description=Petio a content request system
