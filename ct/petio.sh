@@ -64,6 +64,9 @@ msg_ok "Updated $APP"
 exit
 }
 
+
+msg_info "Debugging"
+
 start
 build_container
 description
