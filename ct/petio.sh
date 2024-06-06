@@ -13,7 +13,7 @@ cat <<"EOF"
   / /_/ / _ \/ __/ / __ \
  / ____/  __/ /_/ / /_/ /
 /_/    \___/\__/_/\____/ 
-
+    Debugging !
 EOF
 }
 header_info
@@ -63,9 +63,6 @@ systemctl start petio.service
 msg_ok "Updated $APP"
 exit
 }
-
-
-msg_info "Debugging"
 
 start
 build_container
